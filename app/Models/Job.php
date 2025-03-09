@@ -8,7 +8,7 @@ class Job extends Model
 {
     protected  $table = 'jobs_table';
 
-    protected $fillable = ['id_post'];
+    protected $guarded = [];
 
     public function post()
     {
