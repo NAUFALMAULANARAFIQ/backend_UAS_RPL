@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jobs', function (Blueprint $table) {
+        Schema::create('jobs_table', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('post_id'); 
             $table->tinyInteger('min_experience_years');
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('jobs_table');
     }
 };

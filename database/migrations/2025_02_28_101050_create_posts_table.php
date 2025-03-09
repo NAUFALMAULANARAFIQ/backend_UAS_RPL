@@ -25,10 +25,7 @@ return new class extends Migration
             $table->foreign('posted_by')->references('id')->on('users')->onDelete('cascade');
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
+    
     public function down(): void
     {
         Schema::dropIfExists('posts');
